@@ -11,7 +11,7 @@ public class ApiTest {
     {
         TestData.startTest("first test",1);
         Api.printconsole = true;
-        Api.getData("http://dummy.restapiexample.com/api/v1/employees");
+        Api.postRequests("http://dummy.restapiexample.com/api/v1/create,http://dummy.restapiexample.com/api/v1/create","{\"name\":\"afbffg\",\"salary\":\"123\",\"age\":\"23\"}");
         TestData.endTest();
     }
 }

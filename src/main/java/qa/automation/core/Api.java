@@ -96,6 +96,26 @@ public class Api {
         }
     }
 
+    public static void postRequests(String urls, String data) throws Exception {
+        HttpResponse response = null;
+        try {
+
+            if(printconsole) {
+                System.out.print("-------------------------------------Request Data-------------------------------------------------" + "\r\n");
+                System.out.print("request url: " + urls + "\r\n");
+                System.out.print("request data: " + data + "\r\n");
+                System.out.print("-----------------------------------End Request Data-----------------------------------------------" + "\r\n");
+            }
+            for(String url:urls.split(",")) {
+                postData(url,data);
+            }
+        }
+        catch(Exception ex)
+        {
+            exceptionHandling(ex, true);
+        }
+    }
+
     public static void postData(String url, String data,String JWT) throws Exception{
 
         HttpResponse response = null;
