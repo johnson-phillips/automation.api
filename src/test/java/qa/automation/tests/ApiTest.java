@@ -2,6 +2,9 @@ package qa.automation.tests;
 
 import org.testng.annotations.Test;
 import qa.automation.core.Api;
+
+import java.util.UUID;
+
 import static qa.automation.report.TestData.*;
 import static qa.automation.core.Api.*;
 
@@ -12,7 +15,7 @@ public class ApiTest {
     {
         startTest("sample post request",1);
         Api.printconsole = true;
-        readResponse(given().body("{\"name\":\"afbffg\",\"salary\":\"123\",\"age\":\"23\"}").post("http://dummy.restapiexample.com/api/v1/create"));
+        readResponse(given().body("{\"name\":\""+ UUID.randomUUID().toString() +"\",\"salary\":\"123\",\"age\":\"23\"}").post("http://dummy.restapiexample.com/api/v1/create"));
         endTest();
     }
 }

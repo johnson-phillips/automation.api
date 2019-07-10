@@ -46,8 +46,8 @@ public class Api extends RestAssured {
         if(printconsole) {
             System.out.print("\r\n" + "----------------------------------------Request Data----------------------------------------" + "\r\n");
             System.out.println(req);
-            System.out.print("\r\n" + "----------------------------------------End Response Data-----------------------------------" + "\r\n");
-            System.out.print("\r\n" + "----------------------------------------Request Data----------------------------------------" + "\r\n");
+            System.out.print("\r\n" + "----------------------------------------End Request Data-----------------------------------" + "\r\n");
+            System.out.print("\r\n" + "----------------------------------------Response Data----------------------------------------" + "\r\n");
             System.out.println("Duration in Milliseconds:" + time);
             System.out.println(res);
             System.out.print("\r\n" + "----------------------------------------End Response Data-----------------------------------" + "\r\n");
