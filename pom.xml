@@ -8,29 +8,14 @@
     <artifactId>api</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-    <repositories>
-        <repository>
-            <id>report</id>
-            <url>https://raw.githubusercontent.com/johnson-phillips/qa.automation.report/master/artifact/</url>
-            <snapshots>
-                <enabled>true</enabled>
-                <updatePolicy>always</updatePolicy>
-            </snapshots>
-            <releases>
-                <enabled>true</enabled>
-                <updatePolicy>daily</updatePolicy>
-            </releases>
-        </repository>
-    </repositories>
-
     <distributionManagement>
         <snapshotRepository>
-            <id>snapshot</id>
+            <id>github</id>
             <layout>default</layout>
-            <url>file:///${project.basedir}/artifact</url>
+            <url>https://maven.pkg.github.com/johnson-phillips/${groupId}.${artifactId}</url>
         </snapshotRepository>
         <repository>
-            <id>repo</id>
+            <id>github</id>
         </repository>
     </distributionManagement>
 
@@ -40,6 +25,12 @@
             <artifactId>report</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
+        <dependency>
+            <groupId>com.aventstack</groupId>
+            <artifactId>extentreports</artifactId>
+            <version>4.0.9</version>
+        </dependency>
+
     </dependencies>
 
     <build>
